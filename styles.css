@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2a2a2a;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.hide-ar {
+    background-color: #ff9800;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.network-view {
+    flex: 1;
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+#network-container {
+    width: 100%;
+    height: 100%;
+}
+
+.node {
+    fill: #4fc3f7;
+    stroke: #fff;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.node:hover {
+    fill: #ff9800;
+}
+
+.node.congested {
+    fill: #f44336;
+}
+
+.link {
+    stroke: #666;
+    stroke-opacity: 0.6;
+    stroke-width: 2;
+    transition: stroke 0.3s, stroke-width 0.3s;
+}
+
+.link.active {
+    stroke: #4fc3f7;
+    stroke-width: 3;
+}
+
+.link.congested {
+    stroke: #f44336;
+    stroke-width: 3;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #2a2a2a;
+    padding: 1rem;
+}
+
+.network-status, .traffic-control, .traffic-metrics {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #4fc3f7;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.status-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+    align-items: center;
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.counter-btn {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    background-color: #4fc3f7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-btn:hover {
+    opacity: 0.9;
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.optimize-btn {
+    background-color: #4caf50;
+}
+
+.congestion-btn {
+    background-color: #f44336;
+}
+
+.reset-btn {
+    background-color: #2196f3;
+}
+
+.ar-mode-info {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.ar-mode-info p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+} 

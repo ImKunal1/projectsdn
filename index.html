@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN Traffic Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SDN Traffic Management</h1>
+            <div class="hide-ar">Hide AR</div>
+        </header>
+        
+        <div class="main-content">
+            <div class="network-view" id="network-container">
+                <!-- Network visualization will be added here -->
+                <div id="tooltip" class="tooltip"></div>
+            </div>
+            
+            <div class="sidebar">
+                <div class="network-status">
+                    <h2>Network Status</h2>
+                    <div class="status-item">
+                        <span>Nodes:</span>
+                        <div class="counter-controls">
+                            <button class="counter-btn decrease-nodes">-</button>
+                            <span id="nodes-count">9</span>
+                            <button class="counter-btn increase-nodes">+</button>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <span>Links:</span>
+                        <div class="counter-controls">
+                            <button class="counter-btn decrease-links">-</button>
+                            <span id="links-count">8</span>
+                            <button class="counter-btn increase-links">+</button>
+                        </div>
+                    </div>
+                    <div class="status-item">
+                        <span>Traffic:</span>
+                        <span>Normal</span>
+                    </div>
+                </div>
+
+                <div class="traffic-control">
+                    <h2>Traffic Control</h2>
+                    <button class="optimize-btn">Optimize Routes</button>
+                    <button class="congestion-btn">Simulate Congestion</button>
+                    <button class="reset-btn">Reset Network</button>
+                </div>
+
+                <div class="traffic-metrics">
+                    <h2>Traffic Metrics</h2>
+                    <!-- Traffic metrics will be added here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="ar-mode-info">
+            <p>Point camera at the marker to view network topology</p>
+            <p>Swipe to rotate | Pinch to zoom</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
